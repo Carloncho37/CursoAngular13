@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class LayoutPageComponent {
 
+  public sideBarItems = [
+    { label: 'listado', icon: 'label', url: './list'},
+    { label: 'Añadir', icon: 'add', url: './new-hero'},
+    { label: 'Buscar', icon: 'search', url: './search'},
+
+  ]
+
 }
