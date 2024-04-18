@@ -1,0 +1,9 @@
+<h1 mat-dialog-title> ¿Confirma la eliminacion de {{ data.superhero}} ? </h1>
+<div mat-dialog-content>
+  <p> Este proceso no es reversible</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" cdkFocusInitial>Cancelar</button>
+  <button mat-button (click)="onConfirm()">Aceptar</button>
+</div>
+

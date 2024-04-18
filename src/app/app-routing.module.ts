@@ -1,6 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { Error404pageComponent } from './shared/pages/error404page/error404page.component';
+import { authGuardActivate, authGuardMatch } from './auth/guards/auth.guard';
+
+
 
 const routes: Routes = [
   {
@@ -20,7 +23,9 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'heroes',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate: [authGuardActivate],
+    // canMatch: [authGuardMatch],
   },
   {
     path: '**',
