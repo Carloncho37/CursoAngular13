@@ -9,9 +9,17 @@
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║ 5. para la libreria de visor de PDF´s: https://pdfviewer.net/extended-pdf-viewer/getting-started                ║
-║ - Ejecutar ```npm i ngx-extended-pdf-viewer --save```                                                           ║
-║ Abir angular.json y configure Angular para copiar la carpeta de assets de la biblioteca                         ║
-║ en la carpeta de assets de su aplicación:                                                                       ║
+║ Ejecutar ```npm i ngx-extended-pdf-viewer --save```                                                             ║
+║ Chequear que este en  los assets en ```angular.json```                                                          ║
+║ Agregar estas líneas a tu componente:                                                                           ║
+║  * En el import statement                                                                                       ║
+║ ``` import { pdfDefaultOptions } from 'ngx-extended-pdf-viewer'; ```                                            ║
+║  * En el constructor:                                                                                           ║
+║    ```pdfDefaultOptions.assetsFolder = 'bleeding-edge';```                                                      ║
+║ Agregar NgxExtendedPdfViewerModule en los imports del módulo donde se va a usar.                                ║ 
+║  Ahora puede mostrar el archivo PDF así:                                                                        ║
+║  ```<ngx-extended-pdf-viewer [src]="'assets/example.pdf'"></ngx-extended-pdf-viewer>```                         ║
 ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝  
   
-
+--
+  

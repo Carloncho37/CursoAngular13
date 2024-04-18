@@ -6,12 +6,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { ExamplePdfViewerComponent } from './example-pdf-viewer/example-pdf-viewer.component';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExamplePdfViewerComponent
   ],
   imports: [
     AppRoutingModule,
@@ -19,6 +22,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     HttpClientModule,
     SharedModule,
+    NgxExtendedPdfViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
